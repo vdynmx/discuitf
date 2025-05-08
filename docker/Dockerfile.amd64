@@ -52,11 +52,13 @@ COPY --from=backend-builder /app/discuit /app/discuit
 COPY config.default.yaml /app/config.yaml
 COPY migrations /app/migrations
 COPY docker/entrypoint.sh /entrypoint.sh
+COPY docker/start.sh /start.sh
 RUN chmod +x /entrypoint.sh
+
 
 WORKDIR /app
 
 # Setup the environment and ports
 EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/app/discuit", "serve"]
+CMD ["/bin/sh", "/start.sh"]
