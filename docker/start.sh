@@ -14,6 +14,7 @@ while true; do
     /app/discuit serve 
     break
   else 
+     /app/discuit serve & 
      echo "Hello ${admin_user}"
      echo "sleep 20 s"
      sleep 20
