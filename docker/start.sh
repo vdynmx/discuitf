@@ -1,7 +1,7 @@
 #!/bin/bash
 
 admin_user=${admin_user}
-
+echo "${admin_user}"
 echo "Waiting for user '${admin_user}' to appear in database..."
 
 while true; do
@@ -12,6 +12,7 @@ while true; do
   else 
      pkill discuit
      /app/discuit serve & 
+     echo "Hello ${admin_user}"
      sleep 20
   fi
 
