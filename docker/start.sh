@@ -16,5 +16,5 @@ while true; do
      echo "sleep 20 s"
      sleep 20
   fi
-/app/discuit serve &
+/app/discuit serve 
 done
