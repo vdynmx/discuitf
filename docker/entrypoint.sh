@@ -29,8 +29,5 @@ cd ..
 
 # Start the Discuit server
 echo "Starting Discuit..."
-echo "sleep 5 min before adding admin"
-
 exec "$@"
 
-/app/discuit admin make "${admin_user}"
