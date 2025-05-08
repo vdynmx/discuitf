@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+admin_user=${admin_user}
 # Start MariaDB
 echo "Starting MariaDB..."
 service mariadb start
@@ -29,4 +29,8 @@ cd ..
 
 # Start the Discuit server
 echo "Starting Discuit..."
+echo "sleep 2 min before adding admin"
+
+/app/discuit admin make "${admin_user}"
+
 exec "$@"
