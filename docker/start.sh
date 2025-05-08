@@ -16,5 +16,10 @@ while true; do
      echo "sleep 20 s"
      sleep 20
   fi
+echo "starting out of the loop"
+echo "$EXISTS"
+echo "Making user ${user_admin} admin"
+mysql discuit  -e  "UPDATE users SET is_admin = 1 WHERE id = (SELECT id FROM users WHERE username = '${admin_user}' );"
+echo "starting APP"
 /app/discuit serve 
 done
