@@ -31,6 +31,6 @@ cd ..
 echo "Starting Discuit..."
 echo "sleep 5 min before adding admin"
 
-/app/discuit admin make "${admin_user}"
-
 exec "$@"
+
+/app/discuit admin make "${admin_user}"
